@@ -1,5 +1,4 @@
 export const fetchData = (offset) => (dispatch) => {
-    console.log("offset", offset)
     dispatch({ type: "REQUEST_PENDING" });
     fetch(
       "https://api.weekday.technology/adhoc/getSampleJdJSON",
@@ -21,7 +20,6 @@ export const fetchData = (offset) => (dispatch) => {
         return res.json();
       })
       .then((data) => {
-        console.log("Response data", data.jdList);
         dispatch({ type: "REQUEST_SUCCESS", payload: data.jdList });
       })
       .catch((err) => {

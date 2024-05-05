@@ -17,7 +17,7 @@ function JobCard(props) {
       <div className="job-info">
         <CardContent>
           <Box sx={{ display: "flex", gap: "5px", margin: 0 }}>
-            <Avatar>W</Avatar>
+            <Avatar  variant="rounded" src={props.job.logoUrl} />
             <div className="company-details">
               <div className="company-info">
                 <Typography variant="body2" className="company-name">
@@ -38,39 +38,31 @@ function JobCard(props) {
             </div>
           </Box>
           <Typography varient="body2">
-            Estimated Salary: 10 - 20 LPA{" "}
+            Estimated Salary: {props.job.minJdSalary} - {props.job.maxJdSalary}{" "} {props.job.salaryCurrencyCode}
           </Typography>
           <div className="job-description">
             <Typography variant="body1" component="p">
               About Company
             </Typography>
             <div className="job-content">
-              ```Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Commodi, quam totam! Deserunt perferendis animi beatae, amet
-              ipsum, voluptatum obcaecati aliquid vitae, quod ipsam perspiciatis
-              dolorem qui neque consequatur sequi. Neque. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Commodi, quam totam! Deserunt
-              perferendis animi beatae, amet ipsum, voluptatum obcaecati aliquid
-              vitae, quod ipsam perspiciatis dolorem qui neque consequatur
-              sequi. Neque. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Commodi, quam totam! Deserunt perferendis animi beatae, amet
-              ipsum, voluptatum obcaecati aliquid vitae, quod ipsam perspiciatis
-              dolorem qui neque consequatur sequi. Neque.```
+              {props.job.jobDetailsFromCompany}
             </div>
           </div>
           <Button onClick={handleOpen} variant="text" className="show-more-btn">
             Show More
           </Button>
-          <JobDescription open={open} handleClose={handleClose} />
+          <JobDescription open={open} handleClose={handleClose} jobDetailsFromCompany={props.job.jobDetailsFromCompany} />
           <div>
             <Typography varient="body2" component="h3">
               Minimum Experience
             </Typography>
             <Typography variant="body2" component="h2">
-              1 years
+            {props.job.minExp} - {props.job.maxExp} years
             </Typography>
           </div>
-          <Button className="apply-btn" variant="contained">
+          <Button className="apply-btn" variant="contained"
+          onClick={window.open(props.job.jdLink, "_blank")}
+          >
             Apply Now
           </Button>
         </CardContent>

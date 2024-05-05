@@ -31,18 +31,10 @@ export default function JobDescription(props) {
           component="h2"
           >Job Description</Typography>
 
-          ```Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-quam totam! Deserunt perferendis animi beatae, amet ipsum,
-voluptatum obcaecati aliquid vitae, quod ipsam perspiciatis
-dolorem qui neque consequatur sequi. Neque.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-quam totam! Deserunt perferendis animi beatae, amet ipsum,
-voluptatum obcaecati aliquid vitae, quod ipsam perspiciatis
-dolorem qui neque consequatur sequi. Neque.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-quam totam! Deserunt perferendis animi beatae, amet ipsum,
-voluptatum obcaecati aliquid vitae, quod ipsam perspiciatis
-dolorem qui neque consequatur sequi. Neque.```
+  <Typography>
+
+    {props.jobDetailsFromCompany}
+  </Typography>
         </Box>
       </Modal>
     </div>
