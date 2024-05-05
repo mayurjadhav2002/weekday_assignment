@@ -1,0 +1,46 @@
+.company-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+.company-details{
+    margin: 0;
+    /* background-color: red; */
+}
+.company-name{
+    color: #8f8b93;
+    font-size: 14px;
+}
+.company-job{
+    font-weight: 400;
+    font-size: 16px;
+}
+.company-location{
+    font-size: 12px;
+}
+.job-card{
+    border-radius: 20px !important;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px 0px !important;
+    color:rgba(0, 0, 0, 0.87);
+    max-width: 400px;
+    /* padding: 5px; */
+}
+.job-description{
+    height: 250px;
+    overflow: hidden;
+    mask-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+.show-more-btn{
+    width: 100%;
+    top: -20px;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+.modal-jd{
+    text-align: center;
+    margin: 0 0 15px;
+}
+.apply-btn{
+    width: 100%;
+    margin-top: 1rem !important;
+}
