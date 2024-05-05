@@ -7,7 +7,7 @@ import { Avatar, Box, Button, Paper } from "@mui/material";
 import "../styles/JobCard.min.css";
 import JobDescription from "./JobDescription";
 
-function JobCard() {
+function JobCard(props) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -21,10 +21,10 @@ function JobCard() {
             <div className="company-details">
               <div className="company-info">
                 <Typography variant="body2" className="company-name">
-                  Company Name
+                  {props.job.companyName}
                 </Typography>
                 <Typography varient="body1" className="company-job">
-                  Software Developer
+                 {props.job.jobRole}
                 </Typography>
               </div>
 
